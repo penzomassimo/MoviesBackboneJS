@@ -7,7 +7,13 @@ var singleBook = Backbone.View.extend({
         console.log('A singleView has been initialized');
         this.render();
     },
+    template: 'template1',
     render: function(){
-        this.$el.html("Hello Massimo");
+        var that = this;
+        $.get("templates/" + this.template + ".html", function(template){
+            var html = $(template).html();
+            that.$el.html(html);
+        });
+        return this;
     }
 });

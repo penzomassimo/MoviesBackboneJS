@@ -1,23 +1,6 @@
 /**
  * Created by massimo on 2/25/15.
  */
-var STORE = {
-    my_constructors: {
-        models: {},
-        collections: {},
-        views: {},
-        router: {}
-    },
-    my_objects: {
-        models: {},
-        collections: {},
-        views: {},
-        router: {}
-    }
-};
-/**
- * Created by massimo on 2/25/15.
- */
 var movies = Backbone.Collection.extend({
     model: movie
 });
@@ -53,13 +36,54 @@ var user = Backbone.Model.extend({
 /**
  * Created by massimo on 2/25/15.
  */
+var AppRouter = Backbone.Router.extend({
+    routes: {
+        "": "handleRoute",
+        "man": "handleRoute2"
+    },
+    handleRoute: function(){
+        var book = new singleBook();
+    },
+    handleRoute2: function(){
+        console.log('route22222');
+    }
+});
+/**
+ * Created by massimo on 2/25/15.
+ */
 var singleBook = Backbone.View.extend({
     el: '#container',
     initialize: function(){
         console.log('A singleView has been initialized');
         this.render();
     },
+    template: 'template1',
     render: function(){
-        this.$el.html("Hello Massimo");
+        var that = this;
+        $.get("templates/" + this.template + ".html", function(template){
+            var html = $(template).html();
+            that.$el.html(html);
+        });
+        return this;
     }
 });
+/**
+ * Created by massimo on 2/25/15.
+ */
+var STORE = {
+    my_constructors: {
+        models: {},
+        collections: {},
+        views: {},
+        router: {}
+    },
+    my_objects: {
+        models: {},
+        collections: {},
+        views: {},
+        router: {}
+    }
+};
+
+var router = new AppRouter();
+Backbone.history.start();

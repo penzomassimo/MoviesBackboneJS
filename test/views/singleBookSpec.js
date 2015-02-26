@@ -4,9 +4,9 @@
 describe("SingleBook View", function(){
     var myView = new singleBook();
 
-    it("has its 'el' property set", function() {
+    /*it("has its 'el' property set", function() {
         expect(myView.el).toBe('#container');
-    });
+    });*/
 
     /*
      it("has default year set to 'no year'", function() {

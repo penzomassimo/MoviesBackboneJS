@@ -52,13 +52,13 @@ module.exports = function(grunt) {
         concat:{
             backbone_elements: {
                 src: [
-                    'scripts/app.js',
                     'scripts/collections/*',
                     'scripts/events/*',
                     'scripts/models/*',
                     'scripts/routes/*',
                     'scripts/templates/*',
-                    'scripts/views/*'
+                    'scripts/views/*',
+                    'scripts/app.js'
                 ],
                 dest: 'scripts_concatenated/scripts.js'
 
@@ -96,6 +96,12 @@ module.exports = function(grunt) {
                 cwd: 'bower_components_minified',
                 src: '**',
                 dest: 'dist/scripts/'
+            },
+            templates: {
+                expand: true,
+                cwd: 'templates',
+                src: '**',
+                dest: 'dist/templates/'
             }
         },
         cssmin: {
