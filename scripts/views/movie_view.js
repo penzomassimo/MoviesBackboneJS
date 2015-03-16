@@ -1,14 +1,18 @@
 /**
- * Created by massimo on 2/25/15.
+ * Created by massimo on 3/15/15.
  */
-define(['underscore', 'backbone'], function(_, Backbone){
-    var singleBook = Backbone.View.extend({
-        el: '#container',
+define([
+    'underscore',
+    'backbone'
+], function(_, Backbone){
+
+    var movie_view = Backbone.View.extend({
+        el: '#movies',
         initialize: function(){
-            console.log('A singleView has been initialized');
+            console.log('A Movie view has been initialized');
             this.render();
         },
-        template: 'template1',
+        template: 'movie_template',
         render: function(){
             var that = this;
             $.get("templates/" + this.template + ".html", function(template){
@@ -18,11 +22,12 @@ define(['underscore', 'backbone'], function(_, Backbone){
             return this;
         },
         events: {
-            'mouseover': 'handler'
+            /*'mouseover': 'handler'*/
         },
         handler: function(){
-            console.log('view clicked');
+            /*console.log('view clicked');*/
         }
     });
-    return singleBook;
+    return movie_view;
+
 });

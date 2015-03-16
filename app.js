@@ -20,8 +20,8 @@ require.config({
     }*/
 });
 
-require(["underscore", "backbone", "scripts/routes/AppRouter.js"], function(_, Backbone, AppRouter){
-    var r = new AppRouter();
+require(["underscore", "backbone", "scripts/routes/app_router.js"], function(_, Backbone, app_router){
+    var r = new app_router();
     Backbone.history.start();
 });
 
@@ -34,7 +34,7 @@ require(["jquery"], function($) {
 
 });
 
-require(["backbone", "scripts/models/movie.js", "scripts/views/singleBook.js"], function($, movie, singleBook) {
+require(["backbone", "scripts/models/movie_model.js", "scripts/views/singleBook.js"], function($, movie, singleBook) {
     var t = new movie();
     console.log(JSON.stringify(t));
     var v = new singleBook();

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url(http://fonts.googleapis.com/css?family=Titillium+Web);
 
 * {
     box-sizing: border-box;
@@ -33,31 +33,48 @@ a:active {
 }
 
 body {
-    background-color: #ffffff;
-    color: #ba9d37;
-    font-family: 'Raleway', sans-serif;
-}
-
-#movie_view {
-    /*positioning*/
-    position: fixed;
-    top: 62px;
+    position: relative;
+    top: 0px;
     right: 0px;
     bottom: 0px;
-    left: 900px;
-    float: right;
+    left: 0px;
+
+    /*size*/
+    height: 600px;
+    width: 100%;
+
+    /*box model*/
+    margin: 0px 0px 0px 0px;
+    /*border: 1px dashed white;*/
+    padding: 0px 0px 0px 0px;
+
+
+    background-color: #dddddd;
+    color: #000000;
+    font-family: 'Titillium Web', sans-serif;
+
+}
+
+#movie_player {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    float: left;
 
 
     /*display*/
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 800px;
-    width: 50%;
+    height: 100%;
+    width: 60%;
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    /*border: 1px dotted #000000;*/
+    border: 1px dotted #000000;
     padding: 0px 0px 0px 0px;
 
 
@@ -66,7 +83,7 @@ body {
 
 }
 
-#leftnavigation {
+#movies {
     /*positioning*/
     position: relative;
     top: 0px;
@@ -79,12 +96,12 @@ body {
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 800px;
-    width: 45%;
+    height: 100%;
+    width: 40%;
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    /*border: 1px dotted #000000*/;
+    border: 1px dotted #000000;
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -97,21 +114,24 @@ body {
     right: 0px;
     bottom: 0px;
     left: 0px;
-    float: left;
+    overflow: hidden; /*used to avoid the disapperance of the container*/
 
     /*display*/
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 50px;
+    height: auto;
     width: 100%;
 
     /*box model*/
-    margin: 0px 0px 5px 0px;
-    border: 1px dotted #000000;
+    margin: 0px 0px 0px 0px;
+    /*border: 1px dotted #000000;*/
+    border-bottom: 1px solid #ff0000;
     padding: 0px 0px 0px 0px;
-    font-size: 40px;
-    text-align: center;
+
+    /*decorations*/
+    /*background-color: #FF7D65;*/
+    font-size: 35px;
 
 }
 
@@ -139,7 +159,7 @@ body {
 
 }
 
-.cover {
+.movie_cover {
     /*positioning*/
     position: relative;
     top: 0px;
@@ -153,7 +173,7 @@ body {
 
     /*size*/
     height: 100%;
-    width: 18%;
+    width: 20%;
 
     /*box model*/
     margin: 0px 0px 5px 0px;
@@ -163,7 +183,7 @@ body {
 
 }
 
-.info {
+.movie_info {
     /*positioning*/
     position: relative;
     top: 0px;
@@ -188,7 +208,7 @@ body {
 
 }
 
-.title {
+.movie_title {
     /*positioning*/
     position: relative;
     top: 0px;
@@ -201,11 +221,131 @@ body {
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 30%;
+    height: auto;
     width: 100%;
 
     /*box model*/
-    margin: 0px 0px 5px 0px;
+    margin: 0px 0px 0px 0px;
+    border: 1px dotted #000000;
+    padding: 0px 0px 0px 0px;
+    /*font-size: 40px;*/
+    font-weight: bold;
+
+}
+
+#content {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    float: left;
+
+    /*display*/
+    display: block; /*default display for div tags*/
+
+    /*size*/
+    height: 800px;
+    width: 100%;
+
+    /*box model*/
+    margin: 5px 0px 0px 0px;
+    border: 1px dotted #000000;
+    padding: 0px 0px 0px 0px;
+    /*font-size: 40px;*/
+
+}
+
+.movie_year {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    float: left;
+
+    /*display*/
+    display: block; /*default display for div tags*/
+
+    /*size*/
+    height: auto;
+    width: 100%;
+
+    /*box model*/
+    margin: 0px 0px 0px 0px;
+    border: 1px dotted #000000;
+    padding: 0px 0px 0px 0px;
+    /*font-size: 40px;*/
+
+}
+
+.movie_summary {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    float: left;
+
+    /*display*/
+    display: block; /*default display for div tags*/
+
+    /*size*/
+    height: auto;
+    width: 100%;
+
+    /*box model*/
+    margin: 0px 0px 0px 0px;
+    border: 1px dotted #000000;
+    padding: 0px 0px 0px 0px;
+    /*font-size: 40px;*/
+}
+
+.player_container {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    /*float: left;*/ /*we comment this because we want the div horizontally centered*/
+
+    /*display*/
+    display: block; /*default display for div tags*/
+
+    /*size*/
+    height: 60%;
+    width: 90%;
+
+    /*box model*/
+    margin: 0 auto 0 auto;
+    border: 1px dotted #000000;
+    padding: 0px 0px 0px 0px;
+    /*font-size: 40px;*/
+
+}
+
+.movie_details {
+    /*positioning*/
+    position: relative;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    float: left;
+
+    /*display*/
+    display: block; /*default display for div tags*/
+
+    /*size*/
+    height: 25px;
+    width: 100%;
+
+    /*box model*/
+    margin: 0px 0px 0px 0px;
     border: 1px dotted #000000;
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
