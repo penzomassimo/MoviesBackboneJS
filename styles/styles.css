@@ -49,7 +49,7 @@ body {
     padding: 0px 0px 0px 0px;
 
 
-    background-color: #dddddd;
+    background-color: #D9D9D9;
     color: #000000;
     font-family: 'Titillium Web', sans-serif;
 
@@ -57,11 +57,11 @@ body {
 
 #movie_player {
     /*positioning*/
-    position: relative;
-    top: 0px;
+    position: fixed;
+    top: 25%;
     right: 0px;
     bottom: 0px;
-    left: 0px;
+    left: 40%;
     float: left;
 
 
@@ -69,12 +69,14 @@ body {
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 100%;
+    height: auto;
     width: 60%;
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
 
 
@@ -101,7 +103,9 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -125,12 +129,15 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
+    border-bottom: 1px solid red;
     padding: 0px 0px 0px 0px;
 
     /*decorations*/
-    /*background-color: #FF7D65;*/
     font-size: 35px;
+    text-align: center;
 
 }
 
@@ -152,7 +159,10 @@ body {
 
     /*box model*/
     margin: 0px 0px 5px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
+    border-bottom: 1px dashed #000000;
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -176,7 +186,9 @@ body {
 
     /*box model*/
     margin: 0px 0px 5px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -200,7 +212,9 @@ body {
 
     /*box model*/
     margin: 0px 0px 5px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -225,7 +239,9 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
     font-weight: bold;
@@ -250,7 +266,9 @@ body {
 
     /*box model*/
     margin: 5px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -274,7 +292,9 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 
@@ -298,26 +318,28 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    border: 1px dotted #000000;
+    /*
+        border: 1px dotted #000000;
+    */
     padding: 0px 0px 0px 0px;
     /*font-size: 40px;*/
 }
 
 .player_container {
     /*positioning*/
-    position: fixed;
-    top: 100px;
+    position: relative;
+    top: 0px;
     right: 0px;
     bottom: 0px;
-    left: 600px;
+    left: 0px;
     /*float: left;*/ /*we comment this because we want the div horizontally centered*/
 
     /*display*/
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 500px;
-    width: 900px;
+    height: auto;
+    width: auto;
 
     /*box model*/
     margin: 0 auto 0 auto;
