@@ -40,7 +40,7 @@ body {
     left: 0px;
 
     /*size*/
-    height: 600px;
+    height: auto;
     width: 100%;
 
     /*box model*/
@@ -125,8 +125,7 @@ body {
 
     /*box model*/
     margin: 0px 0px 0px 0px;
-    /*border: 1px dotted #000000;*/
-    border-bottom: 1px solid #ff0000;
+    border: 1px dotted #000000;
     padding: 0px 0px 0px 0px;
 
     /*decorations*/
@@ -246,7 +245,7 @@ body {
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 800px;
+    height: auto;
     width: 100%;
 
     /*box model*/
@@ -306,19 +305,19 @@ body {
 
 .player_container {
     /*positioning*/
-    position: relative;
-    top: 0px;
+    position: fixed;
+    top: 100px;
     right: 0px;
     bottom: 0px;
-    left: 0px;
+    left: 600px;
     /*float: left;*/ /*we comment this because we want the div horizontally centered*/
 
     /*display*/
     display: block; /*default display for div tags*/
 
     /*size*/
-    height: 60%;
-    width: 90%;
+    height: 500px;
+    width: 900px;
 
     /*box model*/
     margin: 0 auto 0 auto;
